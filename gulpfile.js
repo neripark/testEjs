@@ -1,18 +1,20 @@
-const gulp = require('gulp');
-const gulpWebserver = require('gulp-webserver');
-const ejs = require('gulp-ejs');
-
+var gulp = require('gulp');
+var gulpWebserver = require('gulp-webserver');
+var ejs = require('gulp-ejs');
 
 gulp.task('ejs',function(){
-  gulp.src('');
+  gulp.src('./src/*.ejs')
+    .pipe(ejs())
+    .pipe(gulp.dest('./dist'));
 });
-
 
 gulp.task('webserver', function(){
   gulp.src('./dist')
-    pipe(gulpWebserver({
-      host: localhost,
-      port: 7777,
+    .pipe(gulpWebserver({
+      host: 'localhost',
+      port: '7777',
       livereload: true
     }));
 });
+
+gulp.task('default', ['webserver','ejs']);
