@@ -25,6 +25,4 @@ gulp.task('watch', function(){
   gulp.watch('src/**/*.ejs', ['ejs']);
 });
 
-gulp
-
 gulp.task('default', ['webserver','ejs','watch']);
