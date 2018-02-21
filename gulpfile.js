@@ -2,9 +2,11 @@ var gulp = require('gulp');
 var gulpWebserver = require('gulp-webserver');
 var ejs = require('gulp-ejs');
 var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
 
 gulp.task('ejs',function(){
   gulp.src('./src/*.ejs')
+    .pipe(plumber())
     .pipe(ejs())
     .pipe(rename({extname: '.html'}))
     .pipe(gulp.dest('./dist'));
