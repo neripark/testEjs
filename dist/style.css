@@ -1,0 +1,7 @@
+#test { padding: 10px; }
+
+#test .testClass { height: inherit; }
+
+#test .aaaaa[data-area="aaa"] { font-size: 16px; }
+
+#test > a:hover { color: red; }

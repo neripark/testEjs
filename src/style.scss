@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#test{
+  padding: 10px;
+  .testClass{
+    height: inherit;
+  }
+  .aaaaa[data-area="aaa"]{
+    font-size: 16px;
+  }
+  & > a:hover{
+    color: red;
+  }
+}
